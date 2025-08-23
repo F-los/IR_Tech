@@ -1,0 +1,385 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Tabs Section
+--------------------------------------------------------------*/
+.tabs {
+  .tabs-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .tabs-header {
+    margin-bottom: 80px;
+
+    @media (max-width: 768px) {
+      margin-bottom: 60px;
+    }
+
+    .nav-tabs {
+      border: none;
+      justify-content: center;
+      gap: 0;
+      background: var(--surface-color);
+      border-radius: 8px;
+      padding: 8px;
+      box-shadow: 0 2px 20px color-mix(in srgb, var(--default-color), transparent 94%);
+
+      @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .nav-item {
+        flex: 1;
+        cursor: pointer;
+
+        @media (max-width: 768px) {
+          flex: none;
+          width: 100%;
+        }
+      }
+
+      .nav-link {
+        border: none;
+        background: transparent;
+        padding: 0;
+        border-radius: 6px;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+
+        &.active {
+          background: var(--accent-color);
+
+          .tab-content-preview {
+            .tab-number {
+              color: var(--contrast-color);
+              background: color-mix(in srgb, var(--contrast-color), transparent 85%);
+            }
+
+            .tab-text {
+
+              h6,
+              small {
+                color: var(--contrast-color);
+              }
+            }
+          }
+        }
+
+        &:hover:not(.active) {
+          background: color-mix(in srgb, var(--accent-color), transparent 95%);
+
+          .tab-content-preview {
+            .tab-number {
+              background: color-mix(in srgb, var(--accent-color), transparent 85%);
+              color: var(--accent-color);
+            }
+          }
+        }
+
+        .tab-content-preview {
+          display: flex;
+          align-items: center;
+          gap: 16px;
+          padding: 20px 24px;
+
+          @media (max-width: 768px) {
+            padding: 16px 20px;
+            gap: 12px;
+          }
+
+          .tab-number {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: color-mix(in srgb, var(--default-color), transparent 92%);
+            color: color-mix(in srgb, var(--default-color), transparent 30%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+
+            @media (max-width: 768px) {
+              width: 32px;
+              height: 32px;
+              font-size: 12px;
+            }
+          }
+
+          .tab-text {
+            text-align: left;
+
+            @media (max-width: 768px) {
+              flex: 1;
+            }
+
+            h6 {
+              margin: 0 0 2px 0;
+              font-size: 14px;
+              font-weight: 500;
+              color: var(--heading-color);
+              transition: all 0.3s ease;
+
+              @media (max-width: 768px) {
+                font-size: 13px;
+              }
+            }
+
+            small {
+              font-size: 11px;
+              color: color-mix(in srgb, var(--default-color), transparent 40%);
+              transition: all 0.3s ease;
+              display: block;
+              line-height: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .tab-content {
+    .tab-pane {
+      animation: fadeInContent 0.5s ease-in-out;
+    }
+
+    .content-area {
+      padding-right: 40px;
+
+      @media (max-width: 992px) {
+        padding-right: 0;
+        margin-bottom: 50px;
+      }
+
+      .content-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: color-mix(in srgb, var(--accent-color), transparent 92%);
+        color: var(--accent-color);
+        padding: 8px 16px;
+        border-radius: 50px;
+        font-size: 12px;
+        font-weight: 500;
+        margin-bottom: 24px;
+
+        i {
+          font-size: 14px;
+        }
+      }
+
+      h3 {
+        font-size: 36px;
+        font-weight: 300;
+        line-height: 1.2;
+        margin-bottom: 24px;
+
+        @media (max-width: 768px) {
+          font-size: 28px;
+        }
+
+        @media (max-width: 576px) {
+          font-size: 24px;
+        }
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 1.7;
+        color: color-mix(in srgb, var(--default-color), transparent 25%);
+        margin-bottom: 40px;
+
+        @media (max-width: 768px) {
+          font-size: 15px;
+        }
+      }
+
+      .highlight-stats {
+        display: flex;
+        gap: 40px;
+        margin-bottom: 40px;
+
+        @media (max-width: 576px) {
+          gap: 24px;
+        }
+
+        .stat-item {
+          .stat-value {
+            display: block;
+            font-size: 28px;
+            font-weight: 300;
+            color: var(--accent-color);
+            line-height: 1;
+            margin-bottom: 4px;
+
+            @media (max-width: 768px) {
+              font-size: 24px;
+            }
+          }
+
+          .stat-label {
+            font-size: 12px;
+            color: color-mix(in srgb, var(--default-color), transparent 40%);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+          }
+        }
+      }
+
+      .feature-points {
+        margin-bottom: 40px;
+
+        .point-item {
+          display: flex;
+          align-items: flex-start;
+          gap: 12px;
+          margin-bottom: 16px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+          i {
+            font-size: 12px;
+            color: var(--accent-color);
+            margin-top: 4px;
+            flex-shrink: 0;
+          }
+
+          span {
+            font-size: 14px;
+            line-height: 1.6;
+            color: var(--default-color);
+          }
+        }
+      }
+
+      .explore-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--accent-color);
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+
+        &:hover {
+          gap: 12px;
+          color: var(--accent-color);
+
+          i {
+            transform: translate(2px, -2px);
+          }
+        }
+
+        i {
+          font-size: 16px;
+          transition: all 0.3s ease;
+        }
+      }
+    }
+
+    .visual-content {
+      position: relative;
+      padding-left: 40px;
+
+      @media (max-width: 992px) {
+        padding-left: 0;
+      }
+
+      img {
+        width: 100%;
+        border-radius: 8px;
+      }
+
+      .floating-element {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+
+        @media (max-width: 768px) {
+          bottom: 15px;
+          right: 15px;
+        }
+
+        .floating-card {
+          background: var(--surface-color);
+          backdrop-filter: blur(10px);
+          border-radius: 12px;
+          padding: 16px 20px;
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          box-shadow: 0 8px 30px color-mix(in srgb, var(--default-color), transparent 85%);
+          border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+          animation: floatAnimation 3s ease-in-out infinite;
+
+          @media (max-width: 768px) {
+            padding: 12px 16px;
+            gap: 10px;
+          }
+
+          i {
+            font-size: 20px;
+            color: var(--accent-color);
+
+            @media (max-width: 768px) {
+              font-size: 18px;
+            }
+          }
+
+          .card-info {
+            span {
+              display: block;
+              font-size: 10px;
+              color: color-mix(in srgb, var(--default-color), transparent 40%);
+              text-transform: uppercase;
+              letter-spacing: 0.5px;
+              margin-bottom: 2px;
+            }
+
+            strong {
+              display: block;
+              font-size: 13px;
+              font-weight: 600;
+              color: var(--heading-color);
+
+              @media (max-width: 768px) {
+                font-size: 12px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @keyframes fadeInContent {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes floatAnimation {
+
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+
+    50% {
+      transform: translateY(-8px);
+    }
+  }
+}

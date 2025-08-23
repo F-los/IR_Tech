@@ -1,0 +1,518 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Service Details Section
+--------------------------------------------------------------*/
+.service-details {
+  .service-hero {
+    margin-bottom: 4rem;
+
+    .service-meta {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+
+      .service-category {
+        background: color-mix(in srgb, var(--accent-color), transparent 85%);
+        color: var(--accent-color);
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+      }
+
+      .reading-time {
+        color: color-mix(in srgb, var(--default-color), transparent 50%);
+        font-size: 0.9rem;
+        font-weight: 300;
+      }
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      font-weight: 300;
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+      color: var(--heading-color);
+      letter-spacing: -0.02em;
+    }
+
+    .service-description {
+      font-size: 1.25rem;
+      line-height: 1.7;
+      color: color-mix(in srgb, var(--default-color), transparent 25%);
+      font-weight: 300;
+      margin: 0;
+    }
+  }
+
+  .service-visual {
+    margin-bottom: 4rem;
+    overflow: hidden;
+    border-radius: 4px;
+
+    img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+
+      &:hover {
+        transform: scale(1.02);
+      }
+    }
+  }
+
+  .service-narrative {
+    margin-bottom: 5rem;
+
+    h3 {
+      font-size: 2rem;
+      font-weight: 300;
+      margin-bottom: 2rem;
+      color: var(--heading-color);
+      letter-spacing: -0.01em;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin-bottom: 2rem;
+      color: var(--default-color);
+      font-weight: 300;
+    }
+  }
+
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+    margin-top: 3rem;
+
+    .benefit-card {
+      text-align: center;
+      padding: 0;
+
+      .benefit-icon {
+        width: 60px;
+        height: 60px;
+        background: color-mix(in srgb, var(--accent-color), transparent 90%);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1.5rem;
+        transition: all 0.3s ease;
+
+        i {
+          font-size: 1.5rem;
+          color: var(--accent-color);
+        }
+      }
+
+      &:hover .benefit-icon {
+        background: var(--accent-color);
+        transform: translateY(-2px);
+
+        i {
+          color: var(--contrast-color);
+        }
+      }
+
+      h4 {
+        font-size: 1.2rem;
+        font-weight: 400;
+        margin-bottom: 1rem;
+        color: var(--heading-color);
+      }
+
+      p {
+        font-size: 1rem;
+        line-height: 1.6;
+        color: color-mix(in srgb, var(--default-color), transparent 30%);
+        margin: 0;
+      }
+    }
+  }
+
+  .timeline-section {
+    margin-bottom: 4rem;
+
+    h3 {
+      font-size: 2rem;
+      font-weight: 300;
+      margin-bottom: 3rem;
+      color: var(--heading-color);
+      letter-spacing: -0.01em;
+    }
+
+    .timeline {
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 30px;
+        top: 0;
+        bottom: 0;
+        width: 1px;
+        background: color-mix(in srgb, var(--default-color), transparent 85%);
+      }
+
+      .timeline-item {
+        position: relative;
+        padding-left: 80px;
+        margin-bottom: 3rem;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        .timeline-marker {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 60px;
+          height: 60px;
+          background: var(--surface-color);
+          border: 2px solid color-mix(in srgb, var(--accent-color), transparent 70%);
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          z-index: 1;
+
+          span {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: var(--accent-color);
+          }
+        }
+
+        .timeline-content {
+          h4 {
+            font-size: 1.3rem;
+            font-weight: 400;
+            margin-bottom: 0.75rem;
+            color: var(--heading-color);
+          }
+
+          p {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 0.5rem;
+            color: var(--default-color);
+          }
+
+          small {
+            color: color-mix(in srgb, var(--default-color), transparent 40%);
+            font-size: 0.9rem;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+
+  .service-sidebar {
+    padding-left: 2rem;
+
+    @media (max-width: 992px) {
+      padding-left: 0;
+      margin-top: 4rem;
+    }
+  }
+
+  .overview-card,
+  .success-story,
+  .consultation-form {
+    background: var(--surface-color);
+    border-radius: 8px;
+    padding: 2.5rem;
+    margin-bottom: 2.5rem;
+    border: 1px solid color-mix(in srgb, var(--default-color), transparent 93%);
+    transition: all 0.3s ease;
+
+    &:hover {
+      border-color: color-mix(in srgb, var(--accent-color), transparent 80%);
+    }
+  }
+
+  .overview-card {
+    .overview-header {
+      h4 {
+        font-size: 1.4rem;
+        font-weight: 400;
+        margin-bottom: 2rem;
+        color: var(--heading-color);
+      }
+    }
+
+    .overview-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+
+      .stat-item {
+        text-align: center;
+
+        .stat-number {
+          font-size: 2rem;
+          font-weight: 300;
+          color: var(--accent-color);
+          line-height: 1;
+          margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+          font-size: 0.85rem;
+          color: color-mix(in srgb, var(--default-color), transparent 40%);
+          font-weight: 500;
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
+        }
+      }
+    }
+
+    .overview-details {
+      border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+      padding-top: 1.5rem;
+
+      .detail-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        .detail-label {
+          font-size: 0.95rem;
+          color: color-mix(in srgb, var(--default-color), transparent 30%);
+          font-weight: 400;
+        }
+
+        .detail-value {
+          font-size: 0.95rem;
+          color: var(--heading-color);
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  .success-story {
+    .story-quote {
+      p {
+        font-size: 1.1rem;
+        line-height: 1.7;
+        color: color-mix(in srgb, var(--default-color), transparent 20%);
+        font-style: italic;
+        margin-bottom: 2rem;
+      }
+    }
+
+    .story-author {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+
+      .author-avatar {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      .author-details {
+        h5 {
+          font-size: 1rem;
+          font-weight: 500;
+          margin-bottom: 0.25rem;
+          color: var(--heading-color);
+        }
+
+        span {
+          display: block;
+          font-size: 0.9rem;
+          color: color-mix(in srgb, var(--default-color), transparent 40%);
+          margin-bottom: 0.25rem;
+        }
+
+        small {
+          font-size: 0.8rem;
+          color: color-mix(in srgb, var(--default-color), transparent 50%);
+        }
+      }
+    }
+
+    .story-metrics {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+
+      .metric {
+        text-align: center;
+
+        .metric-value {
+          font-size: 1.5rem;
+          font-weight: 500;
+          color: var(--accent-color);
+          display: block;
+          margin-bottom: 0.25rem;
+        }
+
+        .metric-label {
+          font-size: 0.8rem;
+          color: color-mix(in srgb, var(--default-color), transparent 40%);
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
+        }
+      }
+    }
+  }
+
+  .consultation-form {
+    .form-header {
+      margin-bottom: 2rem;
+
+      h4 {
+        font-size: 1.4rem;
+        font-weight: 400;
+        margin-bottom: 0.75rem;
+        color: var(--heading-color);
+      }
+
+      p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        color: color-mix(in srgb, var(--default-color), transparent 30%);
+        margin: 0;
+      }
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-input {
+      width: 100%;
+      padding: 1rem;
+      border: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+      border-radius: 4px;
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+      background: transparent;
+
+      &:focus {
+        outline: none;
+        border-color: var(--accent-color);
+        box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent-color), transparent 90%);
+      }
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select,
+    textarea {
+      color: var(--default-color);
+      background-color: var(--surface-color);
+      font-size: 14px;
+      border-color: color-mix(in srgb, var(--default-color), transparent 80%);
+
+      &:focus {
+        border-color: var(--accent-color);
+      }
+
+      &::placeholder {
+        color: color-mix(in srgb, var(--default-color), transparent 70%);
+      }
+    }
+
+    .btn-consultation {
+      background: var(--accent-color);
+      color: var(--contrast-color);
+      border: none;
+      padding: 1rem 2rem;
+      border-radius: 4px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      transition: all 0.3s ease;
+      text-transform: none;
+
+      &:hover {
+        background: color-mix(in srgb, var(--accent-color), transparent 10%);
+        transform: translateY(-1px);
+      }
+
+      i {
+        font-size: 0.9rem;
+      }
+    }
+  }
+
+  // Mobile Responsiveness
+  @media (max-width: 768px) {
+    .service-hero {
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      .service-description {
+        font-size: 1.1rem;
+      }
+    }
+
+    .service-visual {
+      img {
+        height: 250px;
+      }
+    }
+
+    .benefits-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .timeline-section {
+      .timeline {
+        &::before {
+          left: 20px;
+        }
+
+        .timeline-item {
+          padding-left: 60px;
+
+          .timeline-marker {
+            width: 40px;
+            height: 40px;
+
+            span {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+    }
+
+    .overview-card {
+      .overview-stats {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+    }
+  }
+}

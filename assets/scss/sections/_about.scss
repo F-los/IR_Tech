@@ -1,0 +1,123 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# About Section
+--------------------------------------------------------------*/
+.about {
+  padding-top: 30px;
+  padding-bottom: 120px;
+
+  .about-image {
+    position: relative;
+
+    img {
+      border-radius: 8px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: translateY(-5px);
+      }
+    }
+  }
+
+  .content {
+    padding-left: 60px;
+
+    @media (max-width: 991px) {
+      padding-left: 0;
+      margin-top: 60px;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      font-weight: 300;
+      line-height: 1.2;
+      margin-bottom: 30px;
+      color: var(--heading-color);
+    }
+
+    .lead {
+      font-size: 1.25rem;
+      font-weight: 300;
+      line-height: 1.8;
+      margin-bottom: 40px;
+      color: color-mix(in srgb, var(--default-color), transparent 20%);
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.8;
+      margin-bottom: 20px;
+      color: color-mix(in srgb, var(--default-color), transparent 30%);
+    }
+  }
+
+  .stats-row {
+    display: flex;
+    gap: 40px;
+    margin: 60px 0 40px 0;
+    padding: 40px 0;
+    border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .stat-item {
+      text-align: center;
+
+      h3 {
+        font-size: 3rem;
+        font-weight: 300;
+        margin-bottom: 8px;
+        color: var(--accent-color);
+        line-height: 1;
+      }
+
+      p {
+        font-size: 0.9rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin: 0;
+        color: color-mix(in srgb, var(--default-color), transparent 40%);
+      }
+    }
+  }
+
+  .cta-wrapper {
+    margin-top: 40px;
+  }
+
+  .btn-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: transparent;
+    border: 2px solid var(--accent-color);
+    color: var(--accent-color);
+    padding: 16px 32px;
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: var(--accent-color);
+      color: var(--contrast-color);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px color-mix(in srgb, var(--accent-color), transparent 60%);
+    }
+
+    i {
+      font-size: 1.125rem;
+      transition: transform 0.3s ease;
+    }
+
+    &:hover i {
+      transform: translateX(3px);
+    }
+  }
+}

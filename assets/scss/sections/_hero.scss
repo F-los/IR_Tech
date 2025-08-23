@@ -1,0 +1,74 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+.hero {
+  padding-top: 120px;
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-bottom: 60px;
+
+  h2 {
+    margin: 0;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+  }
+
+  p {
+    color: color-mix(in srgb, var(--default-color), transparent 30%);
+    margin: 5px 0 10px 0;
+    font-size: 20px;
+    font-weight: 400;
+  }
+
+  .download-btn {
+    &+.download-btn {
+      margin-left: 20px;
+    }
+
+    color: var(--contrast-default);
+    background: color-mix(in srgb, var(--default-color), transparent 90%);
+    font-family: var(--heading-font);
+    font-weight: 500;
+    font-size: 15px;
+    padding: 8px 30px 10px 30px;
+    border-radius: 3px;
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      background: var(--accent-color);
+      color: var(--contrast-color);
+    }
+
+    i {
+      font-size: 16px;
+      line-height: 0;
+      margin-right: 8px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 28px;
+      line-height: 36px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 24px;
+      margin-bottom: 30px;
+    }
+
+    .download-btn {
+      font-size: 14px;
+      padding: 8px 20px 10px 20px;
+    }
+  }
+}
