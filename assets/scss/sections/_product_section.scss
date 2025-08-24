@@ -4,7 +4,7 @@
 --------------------------------------------------------------*/
 .product_section {
   padding: 20px 0 30px;
-  background-color: #ffffff;
+  background-color: transparent;
 
   .tabs {
     max-width: 1300px;
@@ -57,12 +57,10 @@
     box-sizing: border-box;
     margin: 0 auto;
     max-width: 1300px;
-    border: 3px solid #00a9e0;
-    /* 시각 부담 줄인 테두리 */
-    border-radius: 0 0 14px 14px;
+    border: none;
+    border-radius: 0;
     padding: 10px;
-    /* 내부 여백 확대 */
-    background-color: #f5f7f9;
+    background-color: transparent;
   }
 
   .products-grid {

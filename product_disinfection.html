@@ -72,17 +72,23 @@
     </div><!-- End Page Title -->
 
     <!-- Product Section Section -->
-    <section id="product_section" class="product_section section">
-      <div class="tabs product-tabs">
-        <button class="tab active">UVC Air Disinfection</button>
-        <button class="tab">UVC Water Disinfection</button>
-        <button class="tab">UVC Surface Disinfection</button>
-        <button class="tab">Odor Removal</button>
-        <button class="tab">Ozone Systems</button>
-      </div>
+    <section id="product_section" class="product_section" style="padding: 60px 0; background: transparent;">
+      <div class="container">
+        <!-- 통합된 컨테이너 블록 -->
+        <div style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-radius: 20px; padding: 0; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+          
+          <!-- 카테고리 탭 -->
+          <div class="tabs product-tabs" style="display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; padding: 30px 30px 20px 30px;">
+            <button class="tab active" style="background: linear-gradient(135deg, #28a745 0%, #1e7e34 100%); color: white; border: none; padding: 12px 24px; border-radius: 25px; font-weight: 500; box-shadow: 0 4px 8px rgba(40,167,69,0.3); transition: all 0.3s ease; cursor: pointer;">UVC Air Disinfection</button>
+            <button class="tab" style="background: white; color: #495057; border: 2px solid #dee2e6; padding: 12px 24px; border-radius: 25px; font-weight: 500; box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: all 0.3s ease; cursor: pointer;">UVC Water Disinfection</button>
+            <button class="tab" style="background: white; color: #495057; border: 2px solid #dee2e6; padding: 12px 24px; border-radius: 25px; font-weight: 500; box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: all 0.3s ease; cursor: pointer;">UVC Surface Disinfection</button>
+            <button class="tab" style="background: white; color: #495057; border: 2px solid #dee2e6; padding: 12px 24px; border-radius: 25px; font-weight: 500; box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: all 0.3s ease; cursor: pointer;">Odor Removal</button>
+            <button class="tab" style="background: white; color: #495057; border: 2px solid #dee2e6; padding: 12px 24px; border-radius: 25px; font-weight: 500; box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: all 0.3s ease; cursor: pointer;">Ozone Systems</button>
+          </div>
 
-      <div id="product_table" class="product_table">
-        <div class="products-grid">
+          <!-- 제품 테이블 -->
+          <div id="product_table" class="product_table" style="padding: 0 30px 30px 30px;">
+          <div class="products-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; padding: 0;">
           <a class="product-card"
             data-tags="components"
             href="assets/img/products/honle/Components and replacement parts/EPSA-80/EPSA-80.pdf"
@@ -159,6 +165,8 @@
             <h4>CD300–1800</h4>
             <p>Heat exchanger disinfection</p>
           </a>
+        </div>
+          </div>
         </div>
       </div>
     </section><!-- /Product Section Section -->
