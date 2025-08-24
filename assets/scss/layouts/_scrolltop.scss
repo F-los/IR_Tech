@@ -6,8 +6,8 @@
   position: fixed;
   visibility: hidden;
   opacity: 0;
-  right: 15px;
-  bottom: 15px;
+  right: 30px; // Same as contact button
+  bottom: 90px; // Stack above contact button
   z-index: 99999;
   background-color: var(--accent-color);
   width: 40px;
@@ -29,5 +29,10 @@
   &.active {
     visibility: visible;
     opacity: 1;
+  }
+
+  @media (max-width: 768px) {
+    right: 20px;
+    bottom: 85px; // Stack above contact button on mobile
   }
 }

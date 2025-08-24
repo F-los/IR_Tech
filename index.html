@@ -49,7 +49,6 @@
               <li><a href="quartz.html">Quartz</a></li>
             </ul>
           </li>
-          <li><a href="#services">서비스</a></li>
           <li><a href="#about">회사소개</a></li>
           <li><a href="#footer">연락처</a></li>
 
@@ -64,39 +63,89 @@
 
     <!-- Hero Section -->
     <section id="hero" class="hero section">
+      <div class="hero-slider">
+        <div class="swiper hero-swiper">
+          <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide">
+              <div class="slide-bg" style="background-image: url('assets/img/about/about-portrait-4.webp');">
+                <div class="slide-overlay"></div>
+                <div class="container">
+                  <div class="slide-content">
+                    <h2>UV/IR 기술 전문기업</h2>
+                    <p>전문적이고 신뢰할 수 있는 UV/IR 기술 솔루션을 제공합니다</p>
+                    <a href="#products" class="btn btn-primary">제품 보기</a>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-      <div class="container">
-        <div class="row gy-4">
-          <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center text-center text-md-start">
-            <h2>IR Tech </h2>
-            <p> IR-Tech 홈페이지에 방문해 주셔서 감사 드립니다. 2010년이래로RAESCH GERMANY 의 국내 파트너로서 반도체용 석영제품​을국내유수의 쿼츠웨어 제조업체에 공급하고 있습니다.</p>
-            <!-- <div class="d-flex mt-4 justify-content-center justify-content-md-start">
-          <a href="#" class="download-btn"><i class="bi bi-google-play"></i> <span>Google Play</span></a>
-          <a href="#" class="download-btn"><i class="bi bi-apple"></i> <span>App Store</span></a>
-        </div> -->
+            <!-- Slide 2 -->
+            <div class="swiper-slide">
+              <div class="slide-bg" style="background-image: url('assets/img/features/features-1.webp');">
+                <div class="slide-overlay"></div>
+                <div class="container">
+                  <div class="slide-content">
+                    <h2>UV Curing 시스템</h2>
+                    <p>인쇄, 코팅, 접착 공정에서 사용되는 고품질 UV 경화 장비</p>
+                    <a href="product_curing.html" class="btn btn-primary">자세히 보기</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="swiper-slide">
+              <div class="slide-bg" style="background-image: url('assets/img/features/features-2.webp');">
+                <div class="slide-overlay"></div>
+                <div class="container">
+                  <div class="slide-content">
+                    <h2>UVC Disinfection</h2>
+                    <p>공기, 물, 표면 소독을 위한 전문적인 UVC 살균 시스템</p>
+                    <a href="product_disinfection.html" class="btn btn-primary">자세히 보기</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="swiper-slide">
+              <div class="slide-bg" style="background-image: url('assets/img/features/features-4.webp');">
+                <div class="slide-overlay"></div>
+                <div class="container">
+                  <div class="slide-content">
+                    <h2>Quartz 제품</h2>
+                    <p>반도체 공정에 필수적인 고순도 석영 제품과 쿼츠웨어</p>
+                    <a href="quartz.html" class="btn btn-primary">자세히 보기</a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="col-lg-6 order-1 order-lg-2 hero-img">
-            <img src="assets/img/illustration/illustration-4.webp" class="img-fluid animated" alt="">
-          </div>
+
+          <!-- Navigation buttons -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+
+          <!-- Pagination -->
+          <div class="swiper-pagination"></div>
         </div>
       </div>
-
     </section><!-- /Hero Section -->
 
-    <!-- Product Categories & Services Section -->
-    <section id="services" class="services section">
+    <!-- Product Categories Section -->
+    <section id="products" class="services section">
 
       <!-- Section Title -->
       <div class="container section-title">
-        <h2>서비스</h2>
-        <p>전문적이고 신뢰할 수 있는 UV/IR 기술 솔루션을 제공합니다</p>
+        <h2>제품</h2>
       </div><!-- End Section Title -->
 
       <div class="container">
 
-        <!-- Services Row -->
-        <div class="row gy-4">
-          <div class="col-lg-6 col-md-6">
+        <!-- Products Row -->
+        <div class="row gy-4 justify-content-center">
+          <div class="col-lg-3 col-md-6">
             <div class="service-card">
               <div class="service-icon">
                 <i class="bi bi-sun"></i>
@@ -108,9 +157,9 @@
                 <i class="bi bi-arrow-right"></i>
               </a>
             </div>
-          </div><!-- End Service Card -->
+          </div><!-- End Product Card -->
 
-          <div class="col-lg-6 col-md-6">
+          <div class="col-lg-3 col-md-6">
             <div class="service-card">
               <div class="service-icon">
                 <i class="bi bi-shield-check"></i>
@@ -122,9 +171,9 @@
                 <i class="bi bi-arrow-right"></i>
               </a>
             </div>
-          </div><!-- End Service Card -->
+          </div><!-- End Product Card -->
 
-          <div class="col-lg-6 col-md-6">
+          <div class="col-lg-3 col-md-6">
             <div class="service-card">
               <div class="service-icon">
                 <i class="bi bi-megaphone"></i>
@@ -136,131 +185,26 @@
                 <i class="bi bi-arrow-right"></i>
               </a>
             </div>
-          </div><!-- End Service Card -->
+          </div><!-- End Product Card -->
 
-          <div class="col-lg-6 col-md-6">
+          <div class="col-lg-3 col-md-6">
             <div class="service-card">
               <div class="service-icon">
                 <i class="bi bi-gem"></i>
               </div>
               <h3>Quartz</h3>
               <p>반도체 공정에 필수적인 고순도 석영 제품과 쿼츠웨어를 공급합니다.</p>
-              <a href="product_c.html" class="service-link">
+              <a href="quartz.html" class="service-link">
                 자세히 보기
                 <i class="bi bi-arrow-right"></i>
               </a>
             </div>
-          </div><!-- End Service Card -->
+          </div><!-- End Product Card -->
         </div>
 
       </div>
 
-    </section><!-- /Product Categories & Services Section -->
-
-    <!-- Clients Section -->
-    <section id="clients" class="clients section">
-
-      <div class="container">
-
-        <div class="swiper init-swiper">
-          <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 600,
-              "autoplay": {
-                "delay": 5000
-              },
-              "slidesPerView": "auto",
-              "breakpoints": {
-                "320": {
-                  "slidesPerView": 2,
-                  "spaceBetween": 40
-                },
-                "480": {
-                  "slidesPerView": 3,
-                  "spaceBetween": 60
-                },
-                "640": {
-                  "slidesPerView": 4,
-                  "spaceBetween": 80
-                },
-                "992": {
-                  "slidesPerView": 6,
-                  "spaceBetween": 120
-                }
-              }
-            }
-          </script>
-          <div class="swiper-wrapper align-items-center">
-            <div class="swiper-slide"><img src="assets/img/clients/clients-1.webp" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/clients-2.webp" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/clients-3.webp" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/clients-4.webp" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/clients-5.webp" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/clients-6.webp" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/clients-7.webp" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/clients-8.webp" class="img-fluid" alt=""></div>
-          </div>
-        </div>
-
-      </div>
-
-    </section><!-- /Clients Section -->
-
-    <!-- About Section -->
-    <section id="about" class="about section">
-
-      <div class="container">
-
-        <div class="row align-items-center">
-
-          <!-- Image Column -->
-          <div class="col-lg-6">
-            <div class="about-image">
-              <img src="assets/img/about/about-portrait-4.webp" alt="About" class="img-fluid">
-            </div>
-          </div>
-
-          <!-- Content Column -->
-          <div class="col-lg-6">
-            <div class="content">
-              <h2>혁신과 헌신을 통한 우수성 추구</h2>
-              <p class="lead">IR-Tech는 UV/IR 장비 분야에서 전문성과 신뢰성을 바탕으로 고객에게 최상의 솔루션을 제공하고 있습니다.</p>
-
-              <p>2010년부터 RAESCH GERMANY의 국내 파트너로서 반도체용 석영제품을 국내 유수의 쿼츠웨어 제조업체에 공급하며, 산업 발전에 기여하고 있습니다.</p>
-
-              <!-- Stats Row -->
-              <div class="stats-row">
-                <div class="stat-item">
-                  <h3><span data-purecounter-start="0" data-purecounter-end="150" data-purecounter-duration="1" class="purecounter"></span>+</h3>
-                  <p>완료 프로젝트</p>
-                </div>
-                <div class="stat-item">
-                  <h3><span data-purecounter-start="0" data-purecounter-end="12" data-purecounter-duration="1" class="purecounter"></span>+</h3>
-                  <p>년 경험</p>
-                </div>
-                <div class="stat-item">
-                  <h3><span data-purecounter-start="0" data-purecounter-end="98" data-purecounter-duration="1" class="purecounter"></span>%</h3>
-                  <p>고객 만족도</p>
-                </div>
-              </div><!-- End Stats Row -->
-
-              <!-- CTA Button -->
-              <div class="cta-wrapper">
-                <a href="#" class="btn-cta">
-                  <span>회사 스토리 보기</span>
-                  <i class="bi bi-arrow-right"></i>
-                </a>
-              </div>
-
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section><!-- /About Section -->
+    </section><!-- /Product Categories Section -->
 
 
 
@@ -286,7 +230,7 @@
         </div>
 
         <div class="col-lg-6">
-          <div class="footer-contact">
+          <div class="footer-contact text-end">
             <h4>연락처</h4>
             <div class="contact-item">
               <div class="contact-icon">
@@ -329,18 +273,10 @@
     <div class="footer-bottom">
       <div class="container">
         <div class="row align-items-center">
-          <div class="col-lg-6">
-            <div class="copyright">
+          <div class="col-lg-12">
+            <div class="copyright text-center">
               <p>© <span>Copyright</span> <strong class="px-1 sitename">IR-Tech</strong> <span>All Rights Reserved</span></p>
             </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="footer-bottom-links">
-              <a href="#">Privacy Policy</a>
-              <a href="#">Terms of Service</a>
-              <a href="#">Cookie Policy</a>
-            </div>
-
           </div>
         </div>
       </div>

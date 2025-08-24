@@ -162,19 +162,30 @@
     if (contactBtn && contactModal) {
       contactBtn.addEventListener('click', (e) => {
         e.preventDefault(); // <a>일 경우 이동 방지
-        contactModal.style.display = 'block';
+        contactModal.classList.add('show');
+        document.body.style.overflow = 'hidden'; // 스크롤 방지
       });
     }
     if (closeBtn && contactModal) {
       closeBtn.addEventListener('click', () => {
-        contactModal.style.display = 'none';
+        contactModal.classList.remove('show');
+        document.body.style.overflow = ''; // 스크롤 복구
       });
       window.addEventListener('click', (event) => {
         if (event.target === contactModal) {
-          contactModal.style.display = 'none';
+          contactModal.classList.remove('show');
+          document.body.style.overflow = ''; // 스크롤 복구
         }
       });
     }
+    
+    // ESC 키로 모달 닫기
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && contactModal && contactModal.classList.contains('show')) {
+        contactModal.classList.remove('show');
+        document.body.style.overflow = '';
+      }
+    });
 
     // mailto:로 한글 안 깨지게 인코딩하여 열기
     const form = document.getElementById('contactForm');
@@ -205,6 +216,30 @@
         window.location.href = `mailto:xoghl1124@gmail.com?subject=${subject}&body=${body}`;
       });
     }
+  });
+
+  /**
+   * Hero Slider
+   */
+  const heroSwiper = new Swiper('.hero-swiper', {
+    loop: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    effect: 'fade',
+    fadeEffect: {
+      crossFade: true
+    },
+    speed: 1000,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
   });
 
 })();

@@ -1,0 +1,231 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Contact Modal
+--------------------------------------------------------------*/
+
+// Contact Button
+.contact-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: var(--accent-color);
+  color: white;
+  border: none;
+  border-radius: 4px; // Square corners like scroll top button
+  padding: 15px 25px; // Rectangular shape to fit text
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: all 0.4s; // Same transition as scroll top
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background: color-mix(in srgb, var(--accent-color), transparent 20%); // Same hover effect as scroll top
+    color: var(--contrast-color);
+  }
+
+  @media (max-width: 768px) {
+    bottom: 20px;
+    right: 20px;
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+}
+
+// Contact Modal
+.contact-modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+
+  &.show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.3s ease;
+  }
+
+  .modal-content {
+    background: white;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 600px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    animation: slideIn 0.3s ease;
+    position: relative;
+
+    @media (max-width: 768px) {
+      width: 95%;
+      max-height: 95vh;
+      border-radius: 10px;
+    }
+  }
+
+  .modal-header {
+    padding: 30px 30px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+
+    h2 {
+      margin: 0;
+      color: var(--heading-color);
+      font-size: 28px;
+      font-weight: 700;
+    }
+
+    .close-btn {
+      background: none;
+      border: none;
+      font-size: 30px;
+      cursor: pointer;
+      color: #999;
+      padding: 0;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: #f5f5f5;
+        color: #333;
+      }
+    }
+
+    @media (max-width: 768px) {
+      padding: 20px 20px 0;
+      margin-bottom: 20px;
+
+      h2 {
+        font-size: 24px;
+      }
+    }
+  }
+
+  .modal-body {
+    padding: 0 30px 30px;
+
+    p {
+      margin-bottom: 30px;
+      color: var(--default-color);
+      line-height: 1.6;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      label {
+        font-weight: 600;
+        color: var(--heading-color);
+        margin-bottom: 8px;
+        font-size: 14px;
+      }
+
+      input, textarea {
+        padding: 12px 16px;
+        border: 2px solid #e1e5e9;
+        border-radius: 8px;
+        font-size: 16px;
+        transition: border-color 0.3s ease;
+        font-family: inherit;
+
+        &:focus {
+          outline: none;
+          border-color: var(--accent-color);
+          box-shadow: 0 0 0 3px rgba(var(--accent-color-rgb), 0.1);
+        }
+
+        &::placeholder {
+          color: #999;
+        }
+      }
+
+      textarea {
+        min-height: 120px;
+        resize: vertical;
+      }
+
+      button[type="submit"] {
+        background: var(--accent-color);
+        color: white;
+        border: none;
+        padding: 15px 30px;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        margin-top: 10px;
+
+        &:hover {
+          background: color-mix(in srgb, var(--accent-color), black 10%);
+          transform: translateY(-1px);
+        }
+      }
+
+      .form-group {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 768px) {
+      padding: 0 20px 20px;
+
+      form {
+        gap: 15px;
+
+        input, textarea {
+          padding: 10px 14px;
+          font-size: 14px;
+        }
+
+        button[type="submit"] {
+          padding: 12px 25px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+// Animations
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

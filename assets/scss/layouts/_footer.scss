@@ -109,6 +109,16 @@
       height: 2px;
       background-color: var(--accent-color);
     }
+    
+    // Right align h4 and underline when in text-end container
+    .text-end & {
+      text-align: right;
+      
+      &:after {
+        left: auto;
+        right: 0;
+      }
+    }
   }
 
   .footer-links {
@@ -150,6 +160,43 @@
   }
 
   .footer-contact {
+    &.text-end {
+      .contact-item {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 20px;
+        justify-content: flex-end; // Right align the whole item
+        text-align: right;
+
+        .contact-icon {
+          width: 40px;
+          height: 40px;
+          background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-right: 15px; // Icon comes first
+          flex-shrink: 0;
+
+          i {
+            color: var(--accent-color);
+            font-size: 16px;
+          }
+        }
+
+        .contact-info {
+          p {
+            margin: 0;
+            color: color-mix(in srgb, var(--default-color), transparent 20%);
+            font-size: 14px;
+            line-height: 1.5;
+            text-align: left; // Text follows icon naturally
+          }
+        }
+      }
+    }
+    
     .contact-item {
       display: flex;
       align-items: flex-start;
@@ -187,6 +234,10 @@
     display: flex;
     gap: 12px;
     margin-top: 25px;
+    
+    .text-end & {
+      justify-content: flex-end; // Right align social links when in text-end container
+    }
 
     a {
       width: 42px;
