@@ -1105,6 +1105,8 @@ h6 {
   justify-content: center;
   margin-right: 15px;
   flex-shrink: 0;
+  align-self: flex-start;
+  margin-top: 2px;
 }
 .footer .footer-contact.text-end .contact-item .contact-icon i {
   color: var(--accent-color);
@@ -1115,7 +1117,20 @@ h6 {
   color: color-mix(in srgb, var(--default-color), transparent 20%);
   font-size: 14px;
   line-height: 1.5;
-  text-align: left;
+  text-align: right;
+}
+
+.footer .footer-contact.text-end .contact-header-line {
+  width: 50px;
+  height: 2px;
+  background-color: var(--accent-color);
+  margin-left: auto;
+  margin-bottom: 15px;
+}
+
+.footer .footer-contact.text-end .social-links {
+  justify-content: flex-end;
+  margin-top: 25px;
 }
 .footer .footer-contact .contact-item {
   display: flex;
@@ -1243,6 +1258,14 @@ h6 {
   .footer .footer-links,
   .footer .footer-contact {
     margin-bottom: 40px;
+  }
+  
+  .footer .footer-contact.text-end {
+    text-align: right;
+  }
+  
+  .footer .footer-contact.text-end .contact-item {
+    justify-content: flex-end;
   }
 }
 
