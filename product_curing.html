@@ -24,6 +24,84 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
+  <!-- Mobile Optimization Styles -->
+  <style>
+    @media (max-width: 768px) {
+      .product_section {
+        padding: 40px 0 !important;
+      }
+      
+      .product_section .container > div {
+        margin: 0 5px !important;
+        border-radius: 15px !important;
+      }
+      
+      .tabs.product-tabs {
+        padding: 20px 15px 15px 15px !important;
+        gap: 8px !important;
+      }
+      
+      .tabs.product-tabs button {
+        padding: 10px 16px !important;
+        font-size: 14px !important;
+        min-width: auto !important;
+      }
+      
+      #product_table {
+        padding: 0 15px 20px 15px !important;
+      }
+      
+      .products-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
+        gap: 15px !important;
+      }
+      
+      .product-card .img-container {
+        height: 180px !important;
+      }
+      
+      .product-card .content-container {
+        padding: 15px !important;
+      }
+      
+      .product-card h4 {
+        font-size: 16px !important;
+      }
+      
+      .product-card p {
+        font-size: 13px !important;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .products-grid {
+        grid-template-columns: 1fr !important;
+        gap: 12px !important;
+      }
+      
+      .tabs.product-tabs {
+        padding: 15px 10px 10px 10px !important;
+      }
+      
+      .tabs.product-tabs button {
+        padding: 8px 12px !important;
+        font-size: 13px !important;
+      }
+      
+      #product_table {
+        padding: 0 10px 15px 10px !important;
+      }
+      
+      .product-card .img-container {
+        height: 160px !important;
+      }
+      
+      .product-card .content-container {
+        padding: 12px !important;
+      }
+    }
+  </style>
+
 </head>
 
 <body class="product-curing-page">
@@ -75,7 +153,7 @@
     <section id="product_section" class="product_section" style="padding: 60px 0; background: transparent;">
       <div class="container">
         <!-- 통합된 컨테이너 블록 -->
-        <div style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-radius: 20px; padding: 0; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+        <div style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-radius: 20px; padding: 0; box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin: 0 10px;">
           
           <!-- 카테고리 탭 -->
           <div class="tabs product-tabs" style="display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; padding: 30px 30px 20px 30px;">
@@ -88,18 +166,18 @@
 
           <!-- 제품 테이블 -->
           <div id="product_table" class="product_table" style="padding: 0 30px 30px 30px;">
-            <div class="products-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;">
+            <div class="products-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
           <a class="product-card"
             data-tags="uv curing"
             href="assets/img/products/Eltosch grafix/Drying/Hi Jet E/hijet_e_line_en.pdf"
             target="_blank" rel="noopener"
             aria-label="Hi Jet E PDF 열기"
             style="display: block; background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 6px 20px rgba(0,0,0,0.08); transition: all 0.3s ease; text-decoration: none; color: inherit; border: none;">
-            <div style="width: 100%; height: 220px; overflow: hidden; background: #f8f9fa;">
+            <div class="img-container" style="width: 100%; height: 220px; overflow: hidden; background: #f8f9fa;">
               <img src="assets/img/products/Eltosch grafix/Drying/Hi Jet E/product.jpg"
                   alt="Hi Jet E" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
             </div>
-            <div style="padding: 20px;">
+            <div class="content-container" style="padding: 20px;">
               <h4 style="margin: 0 0 10px 0; font-size: 18px; font-weight: 600;">Hi Jet E</h4>
               <p style="margin: 0; color: #6c757d; font-size: 14px; line-height: 1.5;">인쇄 잉크, 바니시 및 코팅용 에너지 효율적인 첨단 건조 시스템입니다.</p>
             </div>
@@ -107,10 +185,10 @@
 
           <a class="product-card" data-tags="led uv" href="assets/img/products/honle/LED-UV units/Bluepoint LED/bluepoint-led-data-sheet-04-2025-en.pdf" target="_blank" rel="noopener" aria-label="Bluepoint LED PDF 열기"
             style="display: block; background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 6px 20px rgba(0,0,0,0.08); transition: all 0.3s ease; text-decoration: none; color: inherit; border: none;">
-            <div style="width: 100%; height: 220px; overflow: hidden; background: #f8f9fa;">
+            <div class="img-container" style="width: 100%; height: 220px; overflow: hidden; background: #f8f9fa;">
               <img src="assets/img/products/honle/LED-UV units/Bluepoint LED/product.jpg" alt="Bluepoint LED" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
             </div>
-            <div style="padding: 20px;">
+            <div class="content-container" style="padding: 20px;">
               <h4 style="margin: 0 0 10px 0; font-size: 18px; font-weight: 600;">Bluepoint LED</h4>
               <p style="margin: 0; color: #6c757d; font-size: 14px; line-height: 1.5;">LED UV 경화 시스템</p>
             </div>
@@ -118,10 +196,10 @@
 
           <a class="product-card" data-tags="led uv" href="assets/img/products/honle/LED-UV units/JET CURE LED/jetcure-led-e.pdf" target="_blank" rel="noopener" aria-label="JET CURE LED PDF 열기"
             style="display: block; background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 6px 20px rgba(0,0,0,0.08); transition: all 0.3s ease; text-decoration: none; color: inherit; border: none;">
-            <div style="width: 100%; height: 220px; overflow: hidden; background: #f8f9fa;">
+            <div class="img-container" style="width: 100%; height: 220px; overflow: hidden; background: #f8f9fa;">
               <img src="assets/img/products/honle/LED-UV units/JET CURE LED/product.jpg" alt="JET CURE LED" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
             </div>
-            <div style="padding: 20px;">
+            <div class="content-container" style="padding: 20px;">
               <h4 style="margin: 0 0 10px 0; font-size: 18px; font-weight: 600;">JET CURE LED</h4>
               <p style="margin: 0; color: #6c757d; font-size: 14px; line-height: 1.5;">LED UV 경화 시스템</p>
             </div>
@@ -129,10 +207,10 @@
 
           <a class="product-card" data-tags="led uv" href="assets/img/products/honle/LED-UV units/LED Pen 2.0/led-pen-2.0-e.pdf" target="_blank" rel="noopener" aria-label="LED Pen 2.0 PDF 열기"
             style="display: block; background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 6px 20px rgba(0,0,0,0.08); transition: all 0.3s ease; text-decoration: none; color: inherit; border: none;">
-            <div style="width: 100%; height: 220px; overflow: hidden; background: #f8f9fa;">
+            <div class="img-container" style="width: 100%; height: 220px; overflow: hidden; background: #f8f9fa;">
               <img src="assets/img/products/honle/LED-UV units/LED Pen 2.0/product.jpg" alt="LED Pen 2.0" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
             </div>
-            <div style="padding: 20px;">
+            <div class="content-container" style="padding: 20px;">
               <h4 style="margin: 0 0 10px 0; font-size: 18px; font-weight: 600;">LED Pen 2.0</h4>
               <p style="margin: 0; color: #6c757d; font-size: 14px; line-height: 1.5;">신뢰성 높은 LED 포인트 광원입니다.</p>
             </div>
@@ -140,10 +218,10 @@
 
           <a class="product-card" data-tags="ir heating" href="assets/img/products/Eltosch grafix/Drying/JET cure_IR/ir-lamp-jetcure-ir.pdf" target="_blank" rel="noopener" aria-label="JET cure IR PDF 열기"
             style="display: block; background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 6px 20px rgba(0,0,0,0.08); transition: all 0.3s ease; text-decoration: none; color: inherit; border: none;">
-            <div style="width: 100%; height: 220px; overflow: hidden; background: #f8f9fa;">
+            <div class="img-container" style="width: 100%; height: 220px; overflow: hidden; background: #f8f9fa;">
               <img src="assets/img/products/Eltosch grafix/Drying/JET cure_IR/product.jpg" alt="JET cure IR" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
             </div>
-            <div style="padding: 20px;">
+            <div class="content-container" style="padding: 20px;">
               <h4 style="margin: 0 0 10px 0; font-size: 18px; font-weight: 600;">JET cure IR</h4>
               <p style="margin: 0; color: #6c757d; font-size: 14px; line-height: 1.5;">IR 가열 및 건조 시스템</p>
             </div>
@@ -151,10 +229,10 @@
 
           <a class="product-card" data-tags="uv curing" href="assets/img/products/honle/UV equipment/jetcure-led-e/jetcure-led-e.pdf" target="_blank" rel="noopener" aria-label="Jetcure LED PDF 열기"
             style="display: block; background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 6px 20px rgba(0,0,0,0.08); transition: all 0.3s ease; text-decoration: none; color: inherit; border: none;">
-            <div style="width: 100%; height: 220px; overflow: hidden; background: #f8f9fa;">
+            <div class="img-container" style="width: 100%; height: 220px; overflow: hidden; background: #f8f9fa;">
               <img src="assets/img/products/honle/UV equipment/jetcure-led-e/images/product.jpg" alt="Jetcure LED" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
             </div>
-            <div style="padding: 20px;">
+            <div class="content-container" style="padding: 20px;">
               <h4 style="margin: 0 0 10px 0; font-size: 18px; font-weight: 600;">Jetcure LED</h4>
               <p style="margin: 0; color: #6c757d; font-size: 14px; line-height: 1.5;">LED UV curing system</p>
             </div>
@@ -162,10 +240,10 @@
 
           <a class="product-card" data-tags="uv curing" href="assets/img/products/honle/UV equipment/ir-lamp-jetcure-ir/ir-lamp-jetcure-ir.pdf" target="_blank" rel="noopener" aria-label="IR Lamp Jetcure PDF 열기"
             style="display: block; background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 6px 20px rgba(0,0,0,0.08); transition: all 0.3s ease; text-decoration: none; color: inherit; border: none;">
-            <div style="width: 100%; height: 220px; overflow: hidden; background: #f8f9fa;">
+            <div class="img-container" style="width: 100%; height: 220px; overflow: hidden; background: #f8f9fa;">
               <img src="assets/img/products/honle/UV equipment/ir-lamp-jetcure-ir/images/product.jpg" alt="IR Lamp Jetcure" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
             </div>
-            <div style="padding: 20px;">
+            <div class="content-container" style="padding: 20px;">
               <h4 style="margin: 0 0 10px 0; font-size: 18px; font-weight: 600;">IR Lamp Jetcure</h4>
               <p style="margin: 0; color: #6c757d; font-size: 14px; line-height: 1.5;">IR curing system</p>
             </div>
@@ -173,10 +251,10 @@
 
           <a class="product-card" data-tags="uv curing" href="assets/img/products/honle/UV equipment/UVA Spot/UVA Spot.pdf" target="_blank" rel="noopener" aria-label="UVA Spot PDF 열기"
             style="display: block; background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 6px 20px rgba(0,0,0,0.08); transition: all 0.3s ease; text-decoration: none; color: inherit; border: none;">
-            <div style="width: 100%; height: 220px; overflow: hidden; background: #f8f9fa;">
+            <div class="img-container" style="width: 100%; height: 220px; overflow: hidden; background: #f8f9fa;">
               <img src="assets/img/products/honle/UV equipment/UVA Spot/images/product.jpg" alt="UVA Spot" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
             </div>
-            <div style="padding: 20px;">
+            <div class="content-container" style="padding: 20px;">
               <h4 style="margin: 0 0 10px 0; font-size: 18px; font-weight: 600;">UVA Spot</h4>
               <p style="margin: 0; color: #6c757d; font-size: 14px; line-height: 1.5;">UV spot curing</p>
             </div>
@@ -184,10 +262,10 @@
 
           <a class="product-card" data-tags="uv curing" href="assets/img/products/honle/UV equipment/UVAHAND/UVAHAND.pdf" target="_blank" rel="noopener" aria-label="UVAHAND PDF 열기"
             style="display: block; background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 6px 20px rgba(0,0,0,0.08); transition: all 0.3s ease; text-decoration: none; color: inherit; border: none;">
-            <div style="width: 100%; height: 220px; overflow: hidden; background: #f8f9fa;">
+            <div class="img-container" style="width: 100%; height: 220px; overflow: hidden; background: #f8f9fa;">
               <img src="assets/img/products/honle/UV equipment/UVAHAND/images/product.jpg" alt="UVAHAND" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
             </div>
-            <div style="padding: 20px;">
+            <div class="content-container" style="padding: 20px;">
               <h4 style="margin: 0 0 10px 0; font-size: 18px; font-weight: 600;">UVAHAND</h4>
               <p style="margin: 0; color: #6c757d; font-size: 14px; line-height: 1.5;">Handheld UV curing</p>
             </div>
@@ -195,10 +273,10 @@
 
           <a class="product-card" data-tags="uv curing" href="assets/img/products/honle/UV equipment/UVACUBE-100-e/UVACUBE-100-e.pdf" target="_blank" rel="noopener" aria-label="UVACUBE 100 PDF 열기"
             style="display: block; background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 6px 20px rgba(0,0,0,0.08); transition: all 0.3s ease; text-decoration: none; color: inherit; border: none;">
-            <div style="width: 100%; height: 220px; overflow: hidden; background: #f8f9fa;">
+            <div class="img-container" style="width: 100%; height: 220px; overflow: hidden; background: #f8f9fa;">
               <img src="assets/img/products/honle/UV equipment/UVACUBE-100-e/images/product.jpg" alt="UVACUBE 100" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
             </div>
-            <div style="padding: 20px;">
+            <div class="content-container" style="padding: 20px;">
               <h4 style="margin: 0 0 10px 0; font-size: 18px; font-weight: 600;">UVACUBE 100</h4>
               <p style="margin: 0; color: #6c757d; font-size: 14px; line-height: 1.5;">UV curing cube system</p>
             </div>
@@ -206,10 +284,10 @@
 
           <a class="product-card" data-tags="uv curing" href="assets/img/products/honle/UV equipment/UVACUBE-400-e/UVACUBE-400-e.pdf" target="_blank" rel="noopener" aria-label="UVACUBE 400 PDF 열기"
             style="display: block; background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 6px 20px rgba(0,0,0,0.08); transition: all 0.3s ease; text-decoration: none; color: inherit; border: none;">
-            <div style="width: 100%; height: 220px; overflow: hidden; background: #f8f9fa;">
+            <div class="img-container" style="width: 100%; height: 220px; overflow: hidden; background: #f8f9fa;">
               <img src="assets/img/products/honle/UV equipment/UVACUBE-400-e/images/product.jpg" alt="UVACUBE 400" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;">
             </div>
-            <div style="padding: 20px;">
+            <div class="content-container" style="padding: 20px;">
               <h4 style="margin: 0 0 10px 0; font-size: 18px; font-weight: 600;">UVACUBE 400</h4>
               <p style="margin: 0; color: #6c757d; font-size: 14px; line-height: 1.5;">UV curing cube system</p>
             </div>
