@@ -9,8 +9,8 @@
   <meta name="keywords" content="">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="assets/img/products/Logo.png" rel="icon">
+  <link href="assets/img/products/Logo.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -32,17 +32,20 @@
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.webp" alt=""> -->
-        <h1 class="sitename">IR-Tech</h1>
+        <img src="assets/img/products/Logo.png" alt="IR-Tech" style="height: 40px;">
       </a>
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="#hero" class="active">홈</a></li>
-          <li><a href="#services">서비스</a></li>
-          <li><a href="#about">회사소개</a></li>
-          <li><a href="product_curing.html">제품</a></li>
+          <li><a href="index.html" class="active">홈</a></li>
+          <li class="dropdown"><a href="#"><span>제품</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="product_curing.html">UV Curing</a></li>
+              <li><a href="product_disinfection.html">UVC Disinfection</a></li>
+              <li><a href="product_heating.html">Heating</a></li>
+              <li><a href="quartz.html">Quartz</a></li>
+            </ul>
+          </li>
           <li><a href="#footer">연락처</a></li>
 
         </ul>
@@ -79,46 +82,6 @@
                 <i class="bi bi-house"></i>
                 홈으로 돌아가기
               </a>
-              <a href="#" class="btn-secondary">
-                <i class="bi bi-search"></i>
-                사이트 검색
-              </a>
-            </div>
-
-          </div>
-        </div>
-
-        <div class="row justify-content-center mt-5">
-          <div class="col-lg-10">
-
-            <div class="helpful-links">
-              <h3>찾고 계신 내용이 여기에 있을 수 있습니다:</h3>
-              <div class="links-grid">
-                <a href="index.html#about" class="link-item">
-                  <i class="bi bi-info-circle"></i>
-                  <span>회사소개</span>
-                </a>
-                <a href="index.html#contact" class="link-item">
-                  <i class="bi bi-telephone"></i>
-                  <span>연락처</span>
-                </a>
-                <a href="index.html#services" class="link-item">
-                  <i class="bi bi-grid-3x3-gap"></i>
-                  <span>서비스</span>
-                </a>
-                <a href="product_curing.html" class="link-item">
-                  <i class="bi bi-box"></i>
-                  <span>제품</span>
-                </a>
-                <a href="#" class="link-item">
-                  <i class="bi bi-question-circle"></i>
-                  <span>고객지원</span>
-                </a>
-                <a href="#" class="link-item">
-                  <i class="bi bi-shield-check"></i>
-                  <span>개인정보처리방침</span>
-                </a>
-              </div>
             </div>
 
           </div>
@@ -135,57 +98,19 @@
     <div class="container">
       <div class="row gy-5">
 
-        <div class="col-lg-4">
-          <div class="footer-content">
-            <a href="index.html" class="logo d-flex align-items-center mb-4">
-              <span class="sitename">IR-Tech</span>
-            </a>
-            <p class="mb-4">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae. Donec velit neque auctor sit amet aliquam vel ullamcorper sit amet ligula.</p>
-
-            <div class="newsletter-form">
-              <h5>Stay Updated</h5>
-              <form class="newsletter-form">
-                <div class="input-group">
-                  <input type="email" name="email" class="form-control" placeholder="Enter your email" required="">
-                  <button type="submit" class="btn-subscribe">
-                    <i class="bi bi-send"></i>
-                  </button>
-                </div>
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Thank you for subscribing!</div>
-              </form>
+        <div class="col-lg-6">
+          <div class="footer-map">
+            <h4>회사 위치</h4>
+            <div class="map-container">
+              <!-- 구글맵 API가 들어갈 자리 -->
+              <div id="map" style="width: 100%; height: 300px; background-color: #f8f9fa; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #6c757d;">
+                <p>구글맵이 여기에 표시됩니다</p>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="col-lg-2 col-6">
-          <div class="footer-links">
-            <h4>회사 정보</h4>
-            <ul>
-              <li><a href="#"><i class="bi bi-chevron-right"></i> About</a></li>
-              <li><a href="#"><i class="bi bi-chevron-right"></i> Careers</a></li>
-              <li><a href="#"><i class="bi bi-chevron-right"></i> Press</a></li>
-              <li><a href="#"><i class="bi bi-chevron-right"></i> Blog</a></li>
-              <li><a href="#"><i class="bi bi-chevron-right"></i> Contact</a></li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- <div class="col-lg-2 col-6">
-        <div class="footer-links">
-          <h4>Solutions</h4>
-          <ul>
-            <li><a href="#"><i class="bi bi-chevron-right"></i> Digital Strategy</a></li>
-            <li><a href="#"><i class="bi bi-chevron-right"></i> Cloud Computing</a></li>
-            <li><a href="#"><i class="bi bi-chevron-right"></i> Data Analytics</a></li>
-            <li><a href="#"><i class="bi bi-chevron-right"></i> AI Solutions</a></li>
-            <li><a href="#"><i class="bi bi-chevron-right"></i> Cybersecurity</a></li>
-          </ul>
-        </div>
-      </div> -->
-
-        <div class="col-lg-4">
+        <div class="col-lg-6">
           <div class="footer-contact">
             <h4>연락처</h4>
             <div class="contact-item">
@@ -229,18 +154,10 @@
     <div class="footer-bottom">
       <div class="container">
         <div class="row align-items-center">
-          <div class="col-lg-6">
-            <div class="copyright">
+          <div class="col-lg-12">
+            <div class="copyright text-center">
               <p>© <span>Copyright</span> <strong class="px-1 sitename">IR-Tech</strong> <span>All Rights Reserved</span></p>
             </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="footer-bottom-links">
-              <a href="#">Privacy Policy</a>
-              <a href="#">Terms of Service</a>
-              <a href="#">Cookie Policy</a>
-            </div>
-
           </div>
         </div>
       </div>
@@ -250,6 +167,44 @@
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- 문의사항 버튼 -->
+  <button id="contact-btn" class="contact-btn">문의사항</button>
+
+  <!-- 모달 -->
+  <div id="contact-modal" class="contact-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>문의사항</h2>
+        <span class="close-btn">&times;</span>
+      </div>
+      <div class="modal-body">
+        <p>저희 홈페이지에 방문해주셔서 감사합니다. 문의를 위해 아래 문항에 정보를 기입해주세요.</p>
+
+        <form id="contactForm">
+          <label>이름*</label>
+          <input type="text" name="이름" placeholder="이름을 입력해주세요." required>
+
+          <label>이메일*</label>
+          <input type="email" name="이메일" placeholder="이메일을 입력해주세요." required>
+
+          <label>휴대전화*</label>
+          <div style="display:flex; gap:4px;">
+            <input type="text" value="+82" style="width:50px;" readonly>
+            <input type="tel" name="휴대전화" placeholder="휴대폰 번호를 입력해주세요." required>
+          </div>
+
+          <label>회사명*</label>
+          <input type="text" name="회사명" placeholder="회사 이름을 입력해주세요." required>
+
+          <label>문의사항*</label>
+          <textarea name="문의사항" placeholder="문의사항을 입력해주세요." required></textarea>
+
+          <button type="submit">제출하기</button>
+        </form>
+      </div>
+    </div>
+  </div>
 
   <!-- Preloader -->
   <div id="preloader">

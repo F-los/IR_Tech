@@ -84,9 +84,11 @@
   document.addEventListener('scroll', toggleScrollTop);
 
   /**
-   * Init swiper sliders
+   * Init swiper sliders (only if Swiper is defined)
    */
   function initSwiper() {
+    if (typeof Swiper === 'undefined') return;
+    
     document.querySelectorAll(".init-swiper").forEach(function(swiperElement) {
       let config = JSON.parse(
         swiperElement.querySelector(".swiper-config").innerHTML.trim()
@@ -103,9 +105,11 @@
   window.addEventListener("load", initSwiper);
 
   /**
-   * Initiate Pure Counter
+   * Initiate Pure Counter (only if PureCounter is defined)
    */
-  new PureCounter();
+  if (typeof PureCounter !== 'undefined') {
+    new PureCounter();
+  }
 
 
   /**
@@ -219,27 +223,30 @@
   });
 
   /**
-   * Hero Slider
+   * Hero Slider (only initialize if .hero-swiper exists and Swiper is defined)
    */
-  const heroSwiper = new Swiper('.hero-swiper', {
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false,
-    },
-    effect: 'fade',
-    fadeEffect: {
-      crossFade: true
-    },
-    speed: 1000,
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-  });
+  const heroSwiperElement = document.querySelector('.hero-swiper');
+  if (heroSwiperElement && typeof Swiper !== 'undefined') {
+    const heroSwiper = new Swiper('.hero-swiper', {
+      loop: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+      effect: 'fade',
+      fadeEffect: {
+        crossFade: true
+      },
+      speed: 1000,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
+  }
 
 })();
